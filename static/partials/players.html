@@ -1,0 +1,20 @@
+<div ng-controller='playersController'>
+    <h3> PLAYERS Controller</h3>
+    <form>
+        Name: <input type='text' ng-model='newPlayer.name'>
+        <input type='submit' ng-click='addPlayers(newPlayer)'>
+    </form>
+
+
+    <table style = "width: 50%">
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="player in players">
+            <td>{{ player.name }}</td>
+            <td> <button ng-click="removePlayers($index)">Delete</button> </td>
+        </tr>
+    </table>
+
+  </div>
